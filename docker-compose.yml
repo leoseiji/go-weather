@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  # The Web Server
+  cep_weather:
+    container_name: go_weather
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: go_weather
+    ports:
+      - "8080:8080"
